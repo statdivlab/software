@@ -1,0 +1,57 @@
+---
+title: "StatDivLab Software"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{StatDivLab Software}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+## Software!!
+
+Something about us
+
+Table with all software
+
+## Flowchart
+
+```{r, echo = FALSE}
+library(DiagrammeR)
+
+grViz("
+digraph flowchart {
+  graph [layout = dot, rankdir = TB]
+
+  node [style=filled, fillcolor=white]
+
+  // Define shapes
+  node [shape = none]
+  Q1 [label = 'I care about...']
+  Q2 [label = 'What do you want to estimate?']
+
+  node [shape = ellipse]
+  A1 [label = 'diversity estimation']
+  A2 [label = 'differential abundance analysis']
+  A3 [label = 'phylogenetics']
+  A4 [label = 'other microbiome questions']
+  A5 [label = 'other statistical tools']
+  A6 [label = 'Richness']
+  A7 [label = <&alpha;/&beta; Diversity>]
+  
+  node [shape = box]
+  S1 [label = 'breakaway', URL=\"https://github.com/adw96/breakaway\"]
+  S2 [label = 'DivNet', URL=\"https://github.com/adw96/DivNet\"]
+
+  // Connect nodes
+  Q1 -> A1
+  Q1 -> A2
+  Q1 -> A3
+  A1 -> Q2
+  Q2 -> A4
+  Q2 -> A5
+  A4 -> S1
+  A5 -> S2
+}
+")
+
+```
