@@ -7,27 +7,47 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-## Software!!
+## Overview
 
-Something about us
+In the statistical diversity lab (StatDivLab), we ... Here is a list of our software packages... 
 
-Table with all software
+| Method       | Topic                         | Short description     |
+|--------------|----------------------------------|-------------|
+| [breakaway](https://github.com/adw96/breakaway)    | Richness estimation              | ...   |
+| [DivNet](https://github.com/adw96/DivNet)       | Alpha/beta diversity estimation  | ...     |
+| [radEmu](https://github.com/statdivlab/radEmu)       | Differential abundance           | ...     |
+| [fastEmu](https://github.com/statdivlab/fastEmu)       | Differential abundance           | ...     |
+| [corncob](https://github.com/statdivlab/corncob)       | Differential abundance           | ...     |
+| [paramedic](https://github.com/statdivlab/paramedic)       | Differential abundance with some absolute data          | ...     |
+| [tinyvamp](https://github.com/statdivlab/tinyvamp)       | Differential abundance with dilution series        | ...     |
+| [happi](https://github.com/statdivlab/happi)       | Gene presence        | ...     |
+| [enviromtx](https://github.com/statdivlab/enviromtx)       | Gene expression (??)    | ...     |
+| [groves](https://github.com/statdivlab/groves)       | Phylogenetics          | ...     |
+| [ExtnSpaces](https://github.com/statdivlab/ExtnSpaces)       | Phylogenetics         | ...     |
+| [rigr](https://github.com/statdivlab/rigr)       | General statistical tools          | ...     |
+| [raoBust](https://github.com/statdivlab/raoBust)       | Robust testing           | ...     |
+| [KikWalk](https://github.com/statdivlab/KikWalk)       | Data analysis           | mammoths!!!    |
 
 ## Flowchart
 
-```{r, echo = FALSE}
+Use this flowchart to... 
+
+Flowchart example below - for Amy to use as she desires! 
+
+```{r, echo = FALSE, fig.width=8, fig.height=6}
 library(DiagrammeR)
 
 grViz("
 digraph flowchart {
   graph [layout = dot, rankdir = TB]
 
-  node [style=filled, fillcolor=white]
+  node [style=filled, fillcolor=white, fontsize = 18, width = 2, height = 1.2, fixedsize=false]
+  edge [fontsize = 16]
 
   // Define shapes
   node [shape = none]
   Q1 [label = 'I care about...']
-  Q2 [label = 'What do you want to estimate?']
+  Q2 [label = 'I want to estimate?']
 
   node [shape = ellipse]
   A1 [label = 'diversity estimation']
@@ -46,11 +66,13 @@ digraph flowchart {
   Q1 -> A1
   Q1 -> A2
   Q1 -> A3
+  Q1 -> A4
+  Q1 -> A5
   A1 -> Q2
-  Q2 -> A4
-  Q2 -> A5
-  A4 -> S1
-  A5 -> S2
+  Q2 -> A6
+  Q2 -> A7
+  A6 -> S1
+  A7 -> S2
 }
 ")
 
